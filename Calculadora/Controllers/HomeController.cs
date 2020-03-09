@@ -18,15 +18,24 @@ namespace Calculadora.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Apresenta a view calculadora no primeiro pedido - HTTP GET
+        /// </summary>
+        /// <returns></returns>
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Index(string a)
         {
             return View();
         }
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
